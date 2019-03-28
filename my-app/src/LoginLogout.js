@@ -1,3 +1,5 @@
+//实现点击按钮切换显示状态
+//点击事件的调用
 import React from 'react';
 import ReactDOM from 'react-dom';
 
