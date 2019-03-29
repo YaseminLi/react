@@ -76,3 +76,17 @@ function Comment(props) {
       </div>
     );
   }
+  
+//条件渲染
+  return(
+    <div>{isTrue?
+      (<h1>book</h1>)
+     :(<h1>pen</h1>)}
+      </div>
+  )
+
+  //组件
+  const numbers=[1,2,3,4,5]
+  const ListItems=numbers.map(item=><li>{item}</li>)
+
+  
