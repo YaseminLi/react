@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calculator from'./liftingStateUp'
+import Todolist from'./todolist'
 
 ReactDOM.render(
-  <Calculator />,
+  <Todolist />,
   document.getElementById('root')
 );
