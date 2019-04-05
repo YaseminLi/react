@@ -1,6 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import reactMixin from 'react-mixin';
 import ComponentBodyChild from './bodychild';
 import PropTypes from 'prop-types';
+import Mixins from './mixins';
 class ComponentBody extends React.Component{
     constructor(){
         super();
@@ -11,7 +14,16 @@ class ComponentBody extends React.Component{
         this.handleClick=this.handleClick.bind(this);
     }
     handleClick(){
-        this.setState({age:100})
+        this.setState({age:100});
+        //第一种方式，获取真实的DOM元素
+        // const mySubmit=document.getElementById('submit');
+        // console.log(mySubmit);
+        // ReactDOM.findDOMNode(mySubmit).style.color='pink';
+
+        //第二种方式，refs
+        // console.log(this.refs.submit);
+        this.refs.submit.style.color='orange';  
+        Mixins.log(); 
     }
     handleChildInput(event){
         this.setState({age:event.target.value})
@@ -23,8 +35,8 @@ class ComponentBody extends React.Component{
                 <h1>这里是页面内容</h1>
                 <p>接收到的父页面的属性：username: {this.props.username} userage: {this.props.userage}</p>
                 <p>age:{this.state.age}</p>
-                <input type='button' value='提交' onClick={this.handleClick}/>
-                <ComponentBodyChild handleChildInput={this.handleChildInput.bind(this)}/>
+                <input id='submit' ref='submit' type='button' value='提交' onClick={this.handleClick}/>
+                <ComponentBodyChild {...this.props} id={4} handleChildInput={this.handleChildInput.bind(this)}/>
             </div>
         )
     }
@@ -36,6 +48,12 @@ ComponentBody.propTypes={
 ComponentBody.defaultProps = {
     username: 'xiaoming'
   };
+
+  reactMixin(ComponentBody.prototype, Mixins);
+
+  
+
+
 
 //第7章
 // import React from 'react';
