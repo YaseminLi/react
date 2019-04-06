@@ -5,3 +5,6 @@
 .miniFooter h1{
     font-style:italic;
 }
+:global(.miniFooter){
+    background-color: pink;
+}

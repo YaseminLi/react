@@ -4,6 +4,7 @@ import ComponentHeader from './component/header';
 import ComponentBody from './component/body';
 import ComponentFooter from './component/footer';
 import { DatePicker } from 'antd';
+import { Button } from 'antd';
 import 'antd/dist/antd.css'; 
 
 class Index extends React.Component{
@@ -14,6 +15,7 @@ class Index extends React.Component{
         <ComponentBody username={'xiaohong'} userage={8}/>
         <ComponentFooter/>
         <DatePicker />
+        <Button type="danger">Danger</Button>
       </div>
     )
   }

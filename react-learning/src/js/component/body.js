@@ -4,6 +4,7 @@ import reactMixin from 'react-mixin';
 import ComponentBodyChild from './bodychild';
 import PropTypes from 'prop-types';
 import Mixins from './mixins';
+
 class ComponentBody extends React.Component{
     constructor(){
         super();
@@ -36,7 +37,10 @@ class ComponentBody extends React.Component{
                 <p>接收到的父页面的属性：username: {this.props.username} userage: {this.props.userage}</p>
                 <p>age:{this.state.age}</p>
                 <input id='submit' ref='submit' type='button' value='提交' onClick={this.handleClick}/>
-                <ComponentBodyChild {...this.props} id={4} handleChildInput={this.handleChildInput.bind(this)}/>
+                <ComponentBodyChild 
+                    {...this.props} id={4} 
+                    // handleChildInput={this.handleChildInput.bind(this)}/>
+                    handleChildInput={()=>this.handleChildInput()}/>
             </div>
         )
     }
