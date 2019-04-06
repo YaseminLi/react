@@ -1,5 +1,4 @@
 import React from 'react';
-const FooterCss=require('../../css/footer.css');
 class ComponentHeader extends React.Component{
     constructor(){
         super();
@@ -25,7 +24,7 @@ class ComponentHeader extends React.Component{
             <header 
             //style={styleComponentHeader.header} 
             //className='smallFontSize' 
-            className={FooterCss.miniFooter}
+            className="miniFooter"
             onClick={this.switchHeader.bind(this)}>
                 <h1>这里是头部</h1>
             </header>
