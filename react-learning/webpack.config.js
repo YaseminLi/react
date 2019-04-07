@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',//开发环境
     // context: path.join(__dirname),
-    entry: "./src/js/index.js",  //入口文件
+    entry: "./src/js/root.js",  //入口文件
     output: {
         // path: path.join(__dirname, "/dist/"),    // 所有输出文件的目标路径，绝对路径！
         // filename: "bundle.js"
