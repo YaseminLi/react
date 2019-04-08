@@ -1,0 +1,26 @@
+html{
+    font-size: 50px;
+}
+#mobileheader{
+    flex:1;
+    background: white;
+}
+
+#mobileheader header{
+    border-bottom: 1px solid #1890ff;
+    padding-top: 10px;
+    padding-left:10px;
+}
+
+#mobileheader header img{
+    height:120px;
+}
+#mobileheader header span{
+    font-size:100px;
+    color: #1890ff;
+    vertical-align: top;/*让元素的顶端和行内最高元素对齐*/
+    padding-left: 10px;
+}
+#mobile footer{
+    text-align:center;
+}

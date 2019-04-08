@@ -10,9 +10,7 @@ module.exports = {
         filename: "./dist/bundle.js"
     },
     devServer: {
-        historyApiFallback: {
-          disableDotRule: true
-        }
+        historyApiFallback: true
       },
     // devServer:{
     //     contentBase:'./src'
