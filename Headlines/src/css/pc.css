@@ -1,0 +1,12 @@
+.logo{
+    align-items: center;/*纵向上居中对齐*/
+    display: flex;
+}
+.logo img{
+    height: 48px;
+    width: 48px;
+}
+.logo span{
+    font-size: 24px;
+    padding-left: 5px;
+}

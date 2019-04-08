@@ -9,6 +9,11 @@ module.exports = {
         path: __dirname,
         filename: "./dist/bundle.js"
     },
+    devServer: {
+        historyApiFallback: {
+          disableDotRule: true
+        }
+      },
     // devServer:{
     //     contentBase:'./src'
     // },//默认路径为outPut path
