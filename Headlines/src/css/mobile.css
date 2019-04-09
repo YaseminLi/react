@@ -24,3 +24,10 @@ html{
 #mobile footer{
     text-align:center;
 }
+#mobileheader header i{
+    font-size: 2rem;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    color: #1890ff;
+}
