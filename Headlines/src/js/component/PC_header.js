@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { Menu, Icon, Modal, Button, Tabs, Form, Input } from 'antd';
-import { tuple } from 'antd/lib/_util/type';
+//import { tuple } from 'antd/lib/_util/type';
 
 const MenuItem = Menu.Item;
 const TabPane = Tabs.TabPane;

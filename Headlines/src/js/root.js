@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PCIndex from './component/PC_index';
+import PCIndex from './component/pc_index';
 import MobileIndex from './component/mobile_index';
 import 'antd/dist/antd.css';
 import MediaQuery from 'react-responsive';

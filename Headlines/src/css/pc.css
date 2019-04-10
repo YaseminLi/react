@@ -16,3 +16,32 @@
 .register{
     float:right !important;
 }
+.container{
+    padding-top:10px;
+}
+.leftContainer{
+    width: 400px;
+    float:left;
+}
+.topNewsList li{
+    list-style: none;
+}
+.topNewsList li a{
+    color:rgba(0, 0, 0, 0.65);
+}
+.topNewsList .ant-card-body{
+    padding:10px;
+}
+.topNewsList .ant-card-body ul{
+    padding:10px;
+    margin:0;
+}
+.imageNewsList .image_block{
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+    .imageNewsList{
+        float: left !important;
+    }
