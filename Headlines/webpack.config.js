@@ -4,11 +4,12 @@ module.exports = {
     entry: './src/js/root.js',
     output: {
         path: __dirname,
-        filename: './src/bundle.js'
-
+        filename: './src/bundle.js',
+        // publicPath: '/'
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        // publicPath: '/'
       },
     module: {
         rules: [

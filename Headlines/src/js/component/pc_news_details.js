@@ -1,5 +1,7 @@
 import React from 'react';
 import {Row,Col} from 'antd';
+import PCHeader from './pc_header';
+import PCFooter from './pc_footer';
 export default class PCNewsDetails extends React.Component{
     constructor(){
         super();
@@ -12,7 +14,7 @@ export default class PCNewsDetails extends React.Component{
         var myFetchOptions = {
             method: 'GET'
         };
-        fetch('http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey='+this.props.params.uniquekey, myFetchOptions)
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey="+this.props.match.params.uniquekey, myFetchOptions)
             .then(response => response.json())
             .then(json => {
                 this.setState({ newsItem: json });
@@ -25,14 +27,16 @@ export default class PCNewsDetails extends React.Component{
     render(){
         return(
             <div>
+                <PCHeader/>
                 <Row>
-                    <Col sapn={2}></Col>
-                    <Col sapn={14} className='container'>
+                    <Col span={2}></Col>
+                    <Col span={14} className='container'>
                     <div className='articleContainer' dangerouslySetInnerHTML={this.createMarkup()}></div>
                     </Col>
-                    <Col sapn={6}></Col>
-                    <Col sapn={2}></Col>
+                    <Col span={6}></Col>
+                    <Col span={2}></Col>
                 </Row>
+                <PCFooter/>
             </div>
         )
     }

@@ -98,7 +98,7 @@ class PCHeader extends React.Component {
                     <Col span={2}></Col>
                     <Col span={4}>
                         <a href='/' className='logo'>
-                            <img src='./src/images/logo.png' alt='logo图片未加载' />
+                            <img src='/src/images/logo.png' alt='logo图片未加载' />
                             <span>ReactNews</span>
                         </a>
                     </Col>
