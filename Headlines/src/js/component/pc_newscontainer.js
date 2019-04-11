@@ -30,17 +30,17 @@ export default class PCNewsContainer extends React.Component {
                             </div>
                             <PCNewsImageBlock count='6' type='guoji' cardtitle='国际新闻' cardwidth='112px' />
                         </div>
-                        <Tabs className='tabs_news'>
+                        <Tabs className='tabs_news' style={{width:600}}>
                             <TabPane tab='头条新闻' key='1'>
-                                <PCNewsClock count='5' type='top' width="400px" bordered="false" />
+                                <PCNewsClock count='27' type='top'  bordered="false" />
                             </TabPane>
                             <TabPane tab='娱乐新闻' key='2'>
-                                <PCNewsClock count='5' type='yule' width="400px" bordered="false" />
+                                <PCNewsClock count='27' type='yule' width="400px" bordered="false" />
                             </TabPane>
                         </Tabs>
                         <div>
-                        <PCNewsImageBlock count='6' type='yule' cardtitle='娱乐新闻' width='100%' cardwidth='112px' />
-                        <PCNewsImageBlock count='6' type='yule' cardtitle='娱乐新闻' width='100%' cardwidth='112px' />
+                        <PCNewsImageBlock count='14' type='guonei' cardtitle='国内新闻' width='100%' cardwidth='112px' />
+                        <PCNewsImageBlock count='28' type='yule' cardtitle='娱乐新闻' width='100%' cardwidth='112px' />
                         </div>
                     </Col>
                     <Col span={2}></Col>

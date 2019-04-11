@@ -133,7 +133,6 @@ class MobileHeader extends React.Component {
         )
     }
 }
-
 const WrappedRegistrationForm = Form.create({ name: 'MobileHeader' })(MobileHeader);
 
 export default WrappedRegistrationForm;

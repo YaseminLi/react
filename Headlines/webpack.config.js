@@ -7,6 +7,9 @@ module.exports = {
         filename: './src/bundle.js'
 
     },
+    devServer: {
+        historyApiFallback: true
+      },
     module: {
         rules: [
             {
