@@ -23,27 +23,26 @@ export default class PCNewsImageBlock extends React.Component {
     }
     render() {
         const { news } = this.state;
-        // console.log(news);
 
         const newList = news.length
-            ? 
- news.map((newsItem, index) =>
-                    (
+            ?
+            news.map((newsItem, index) =>
+                (<div key={newsItem.uniquekey} className='pc-news-image-block'>
+                    <Router><Link to={`details/${newsItem.uniquekey}`} target="_blank">
                         <Card
-
                             style={{ width: this.props.cardwidth }}
                             bordered={false}
                             className='image_block'
-                            key={index}
                             cover={<img alt="pc_news_image_block" src={newsItem.thumbnail_pic_s} />}
                         >
-                            <Router><Link to={`details/${newsItem.uniquekey}`} target="_blank"></Link></Router>
+
                             <Meta
                                 title={newsItem.title}
                                 description={newsItem.author_name}
                             />
                         </Card>
-                    ))
+                    </Link></Router>
+                </div>))
             : '没有加载到任何新闻';
         return (
             <div className='imageNewsList'>

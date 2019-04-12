@@ -1,11 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import PCHeader from './pc_header';
-import PCFooter from './pc_footer';
-import PCNewsImageBlock from './pc_news_image_block';
+import MobileHeader from './mobile_header';
+import MobileFooter from './mobile_footer';
+//import PCNewsImageBlock from './pc_news_image_block';
 import { BackTop } from 'antd';
-import CommonComments from './common_comments'
-export default class PCNewsDetails extends React.Component {
+export default class MpbileNewsDetails extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -30,20 +29,13 @@ export default class PCNewsDetails extends React.Component {
     render() {
         return (
             <div>
-                <PCHeader />
+                <MobileHeader />
                 <Row>
-                    <Col span={2}></Col>
-                    <Col span={14} className='container'>
+                    <Col span={24} className='container'>
                         <div className='articleContainer' dangerouslySetInnerHTML={this.createMarkup()}></div>
-                        <CommonComments uniquekey={this.state.newsItem.uniquekey}/>
                     </Col>
-                    <Col span={6}>
-                        <PCNewsImageBlock count='20' type='top' cardtitle='相关新闻' width='100%' cardwidth='112px' />
-                    </Col>
-                    <Col span={2}></Col>
                 </Row>
-               
-                <PCFooter />
+                <MobileFooter/>
                 <BackTop />
             </div>
         )

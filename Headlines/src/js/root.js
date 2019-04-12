@@ -6,6 +6,7 @@ import MobileIndex from './component/mobile_index';
 // import 'antd/dist/antd.css';
 import MediaQuery from 'react-responsive';
 import PCNewsDetails from './component/pc_news_details'
+import MobileNewsDetails from './component/mobile_new_details'
 class Root extends React.Component {
     render() {
         return (
@@ -19,7 +20,12 @@ class Root extends React.Component {
                     </BrowserRouter>
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={1224}>
-                    <MobileIndex />
+                <BrowserRouter>
+                        <Switch>
+                            <Route exact path='/' component={MobileIndex}></Route>
+                            <Route path='/details/:uniquekey' component={MobileNewsDetails}></Route>
+                        </Switch>
+                    </BrowserRouter>
                 </MediaQuery>
             </div>
         );

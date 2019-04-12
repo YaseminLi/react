@@ -2,7 +2,7 @@
 import React from 'react';
 import MobileHeader from './mobile_header';
 import MobileFooter from './mobile_footer';
-import { Tabs, Carousel } from 'antd';
+import { Tabs, Carousel, BackTop } from 'antd';
 import MobileList from './mobile_list'
 const TabPane = Tabs.TabPane;
 
@@ -39,6 +39,7 @@ export default class MobileIndex extends React.Component {
                     <TabPane tab="时尚" key="7"><MobileList count='8' type='shishang' /></TabPane>
                 </Tabs>
                 <MobileFooter />
+                <BackTop/>
             </div>
 
         )

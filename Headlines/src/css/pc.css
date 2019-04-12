@@ -43,6 +43,7 @@
     padding-right: 2px;
 }
 .imageNewsList{float: left !important;}
+.imageNewsList .ant-card-body .pc-news-image-block{display: inline;}
 .imageNewsList .ant-card-body{padding:10px}
 .imageNewsList .ant-card-meta-title{font-size:14px}
 .imageNewsList .ant-card-meta-description{font-size:12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
