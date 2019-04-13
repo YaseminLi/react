@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { Menu, Icon, Modal, Button, Tabs, Form, Input } from 'antd';
+import { BrowserRouter, Link } from 'react-router-dom';
 //import { tuple } from 'antd/lib/_util/type';
 
 const MenuItem = Menu.Item;
@@ -23,12 +24,12 @@ class PCHeader extends React.Component {
     }
     //页面刷新保留登录状态
     //组件将要加载前
-    componentWillMount(){
-        if(localStorage.NickUserName!==''){
+    componentWillMount() {
+        if (localStorage.NickUserName !== '') {
             this.setState({
-                hasLogined:true,
-                userNickName:localStorage.userNickName,
-                userId:localStorage.userId
+                hasLogined: true,
+                userNickName: localStorage.userNickName,
+                userId: localStorage.userId
             })
         }
     }
@@ -50,33 +51,33 @@ class PCHeader extends React.Component {
         };
         var formData = this.props.form.getFieldsValue();
         console.log(formData);
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action="+this.state.action
-        + "&username="+formData.userName+"&password="+formData.password
-        +"&r_userName=" + formData.r_userName + "&r_password="
-        + formData.r_password + "&r_confirmPassword="
-        + formData.r_confirmPassword, myFetchOptions)
-        .then(response => response.json())
-        .then(json => {
-            this.setState({userNickName: json.NickUserName, userId: json.UserId});
-            localStorage.userId=json.UserId;
-            localStorage.userNickName=json.NickUserName;
-        });
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
+            + "&username=" + formData.userName + "&password=" + formData.password
+            + "&r_userName=" + formData.r_userName + "&r_password="
+            + formData.r_password + "&r_confirmPassword="
+            + formData.r_confirmPassword, myFetchOptions)
+            .then(response => response.json())
+            .then(json => {
+                this.setState({ userNickName: json.NickUserName, userId: json.UserId });
+                localStorage.userId = json.UserId;
+                localStorage.userNickName = json.NickUserName;
+            });
         // message.success("请求成功！");
-        if(this.state.action=='login'){
-            this.setState({hasLogined:true});
+        if (this.state.action == 'login') {
+            this.setState({ hasLogined: true });
         }
         this.setModalVisible(false);
     }
-    callback(key){
-        if(key==1){
-            this.setState({action:'login'});
-        }else{this.setState({action:'register'});}
+    callback(key) {
+        if (key == 1) {
+            this.setState({ action: 'login' });
+        } else { this.setState({ action: 'register' }); }
     };
-    logout(){
-        localStorage.userId="";
-        localStorage.userNickName="";
+    logout() {
+        localStorage.userId = "";
+        localStorage.userNickName = "";
         this.setState({
-            hasLogined:false
+            hasLogined: false
         })
     }
     render() {
@@ -85,7 +86,11 @@ class PCHeader extends React.Component {
             <MenuItem key='logout' className='register'>
                 <Button type="primary" >{this.state.userNickName}</Button>
                 &nbsp;&nbsp;
-            <Button type="ghost" >个人中心</Button>
+                <BrowserRouter>
+                    <Link to={`usercenter`} target="_blank">
+                        <Button type="ghost" >个人中心</Button>
+                    </Link>
+                </BrowserRouter>
                 &nbsp;&nbsp;
             <Button type="dashed" onClick={this.logout.bind(this)}>退出</Button>
             </MenuItem>

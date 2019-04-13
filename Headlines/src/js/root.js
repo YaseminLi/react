@@ -6,7 +6,8 @@ import MobileIndex from './component/mobile_index';
 // import 'antd/dist/antd.css';
 import MediaQuery from 'react-responsive';
 import PCNewsDetails from './component/pc_news_details'
-import MobileNewsDetails from './component/mobile_new_details'
+import MobileNewsDetails from './component/mobile_new_details';
+import PCUserCenter from './component/pc_usercenter'
 class Root extends React.Component {
     render() {
         return (
@@ -16,6 +17,7 @@ class Root extends React.Component {
                         <Switch>
                             <Route exact path='/' component={PCIndex}></Route>
                             <Route path='/details/:uniquekey' component={PCNewsDetails}></Route>
+                            <Route path='/usercenter' component={PCUserCenter}></Route>
                         </Switch>
                     </BrowserRouter>
                 </MediaQuery>

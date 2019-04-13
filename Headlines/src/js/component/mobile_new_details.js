@@ -4,6 +4,7 @@ import MobileHeader from './mobile_header';
 import MobileFooter from './mobile_footer';
 //import PCNewsImageBlock from './pc_news_image_block';
 import { BackTop } from 'antd';
+import CommonComments from './common_comments'
 export default class MpbileNewsDetails extends React.Component {
     constructor() {
         super();
@@ -33,6 +34,7 @@ export default class MpbileNewsDetails extends React.Component {
                 <Row>
                     <Col span={24} className='container'>
                         <div className='articleContainer' dangerouslySetInnerHTML={this.createMarkup()}></div>
+                        <CommonComments uniquekey={this.props.match.params.uniquekey}/>
                     </Col>
                 </Row>
                 <MobileFooter/>
