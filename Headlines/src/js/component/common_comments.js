@@ -40,7 +40,7 @@ class CommonComments extends React.Component {
             method: 'GET'
         };
         const formData = this.props.form.getFieldsValue();
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=" + localStorage.userId + "&uniquekey=" + this.props.uniquekey + "&commnet=" + formData.inputcomment, myFetchOptions)
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userId + "&uniquekey=" + this.props.uniquekey, myFetchOptions)
             .then(response => response.json())
             .then(json => {
                 //收藏成功后弹出的内容

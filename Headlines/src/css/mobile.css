@@ -65,3 +65,16 @@ html{
     color: red;
     background: rgb(236, 221, 221);
 }
+
+ .ant-tabs-nav-scroll{
+    font-size:36px
+}
+.mobileuccenter .ant-list-item{
+    display: flex;
+    justify-content:space-between;
+    font-size:24px;
+}
+.mobileuccenter .ant-list-item .ucdetails{
+    margin-right:20px;
+    color:red}
+.mobileuccenter .ant-list-item p{margin:0;}

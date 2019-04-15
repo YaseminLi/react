@@ -8,6 +8,7 @@ import MediaQuery from 'react-responsive';
 import PCNewsDetails from './component/pc_news_details'
 import MobileNewsDetails from './component/mobile_new_details';
 import PCUserCenter from './component/pc_usercenter'
+import MobileUserCenter from './component/mobile_usercenter'
 class Root extends React.Component {
     render() {
         return (
@@ -26,6 +27,7 @@ class Root extends React.Component {
                         <Switch>
                             <Route exact path='/' component={MobileIndex}></Route>
                             <Route path='/details/:uniquekey' component={MobileNewsDetails}></Route>
+                            <Route path='/usercenter' component={MobileUserCenter}></Route>
                         </Switch>
                     </BrowserRouter>
                 </MediaQuery>

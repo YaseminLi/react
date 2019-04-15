@@ -4,6 +4,7 @@ import { Carousel, Row, Col, Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 import PCNewsClock from './pc_news_block';
 import PCNewsImageBlock from './pc_news_image_block';
+import PCProduct from './pc_product'
 export default class PCNewsContainer extends React.Component {
     render() {
         const settings = {
@@ -36,6 +37,11 @@ export default class PCNewsContainer extends React.Component {
                             </TabPane>
                             <TabPane tab='娱乐新闻' key='2'>
                                 <PCNewsClock count='27' type='yule' width="400px" bordered="false" />
+                            </TabPane>
+                        </Tabs>
+                        <Tabs className='pc_prodcuct'>
+                            <TabPane tab='媒体合作' key='1'>
+                                <PCProduct/>
                             </TabPane>
                         </Tabs>
                         <div>
