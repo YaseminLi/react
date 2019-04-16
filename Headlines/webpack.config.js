@@ -10,7 +10,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         // publicPath: '/'
-      },
+    },
     module: {
         rules: [
             {
@@ -21,11 +21,11 @@ module.exports = {
                     presets: ['@babel/preset-env', "@babel/preset-react"], //babel-loader需要的预设
                     plugins: [
                         ["import", {
-                          libraryName: "antd",
-                          libraryDirectory: "es",
-                          style: "css" // `style: true` 会加载 less 文件
+                            libraryName: "antd",
+                            libraryDirectory: "es",
+                            style: "css" // `style: true` 会加载 less 文件
                         }]
-                      ]
+                    ]
                 }
             },
             {
@@ -42,6 +42,16 @@ module.exports = {
                     }
                 ],
             },
+            {
+                test: /\.less$/,
+                use: [{
+                    loader: 'style-loader' // creates style nodes from JS strings
+                }, {
+                    loader: 'css-loader' // translates CSS into CommonJS
+                }, {
+                    loader: 'less-loader' // compiles Less to CSS
+                }]
+            }
 
         ]
     }

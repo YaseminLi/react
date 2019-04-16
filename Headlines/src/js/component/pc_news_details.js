@@ -31,7 +31,7 @@ export default class PCNewsDetails extends React.Component {
         return (
             <div>
                 <PCHeader />
-                <Row>
+                <Row className='pc_news_details'>
                     <Col span={2}></Col>
                     <Col span={14} className='container'>
                         <div className='articleContainer' dangerouslySetInnerHTML={this.createMarkup()}></div>

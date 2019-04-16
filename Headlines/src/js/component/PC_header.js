@@ -101,11 +101,10 @@ class PCHeader extends React.Component {
             <header>
                 <Row>
                     <Col span={2}></Col>
-                    <Col span={4}>
-                        <a href='/' className='logo'>
-                            <img src='/src/images/logo.png' alt='logo图片未加载' />
-                            <span>ReactNews</span>
-                        </a>
+                    <Col span={4} className='logo'>
+                    {/* <img src='/src/images/news.svg' alt='logo图片未加载'/> */}
+                        <img src='/src/images/logo.png' alt='logo图片未加载' />
+                        <span>ReactNews</span>
                     </Col>
                     <Col span={16}>
                         <Menu mode='horizontal' selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)}>

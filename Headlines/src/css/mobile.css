@@ -1,4 +1,4 @@
-html{
+/* html{
     font-size: 50px;
 }
 #mobileheader{
@@ -19,7 +19,7 @@ html{
     font-size:100px;
     color: #1890ff;
     vertical-align: top;/*让元素的顶端和行内最高元素对齐*/
-    padding-left: 10px;
+    /* padding-left: 10px;
 }
 #mobileheader footer{
     text-align:center;
@@ -32,8 +32,11 @@ html{
     margin-top: 0.5rem;
     color: #1890ff;
 }
+/* .mobile{
+    background: pink;
+} */
 /* 导航栏字体大小 */
-.mobile .ant-tabs-nav-container{
+/* .mobile .ant-tabs-nav-container{
     font-size:36px
 }
 .mobile  .ant-tabs-tab{
@@ -47,7 +50,7 @@ html{
     height:3em
 }
 /* .mobile .ant-carousel .slick-current{margin:0 40px;} */
-.mobile .ant-carousel .slick-current img{width: 100%}
+/* .mobile .ant-carousel .slick-current img{width: 100%}
 .mobile .ant-list-item{padding:20px 40px}
 .mobile .ant-list-item img{width:320px;height:240px}
 .mobile .ant-list-item .ant-list-item-meta{padding-left: 20px}
@@ -65,8 +68,10 @@ html{
     color: red;
     background: rgb(236, 221, 221);
 }
-
- .ant-tabs-nav-scroll{
+.mobile .tloader-btn{
+    font-size:36px !important;
+}
+ .mobile .ant-tabs-nav-scroll{
     font-size:36px
 }
 .mobileuccenter .ant-list-item{
@@ -78,3 +83,4 @@ html{
     margin-right:20px;
     color:red}
 .mobileuccenter .ant-list-item p{margin:0;}
+  */ 
