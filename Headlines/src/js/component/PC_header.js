@@ -9,6 +9,9 @@ const TabPane = Tabs.TabPane;
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 const FormItem = Form.Item;
+const IconFont = Icon.createFromIconfontCN({
+    scriptUrl: '//at.alicdn.com/t/font_1146249_ipo45oxj7xs.js',
+  });
 
 class PCHeader extends React.Component {
     constructor() {
@@ -87,7 +90,7 @@ class PCHeader extends React.Component {
                 <Button type="primary" >{this.state.userNickName}</Button>
                 &nbsp;&nbsp;
                 <BrowserRouter>
-                    <Link to={`usercenter`} target="_blank">
+                    <Link to={`/usercenter`} target="_blank">
                         <Button type="ghost" >个人中心</Button>
                     </Link>
                 </BrowserRouter>
@@ -102,8 +105,7 @@ class PCHeader extends React.Component {
                 <Row>
                     <Col span={2}></Col>
                     <Col span={4} className='logo'>
-                    {/* <img src='/src/images/news.svg' alt='logo图片未加载'/> */}
-                        <img src='/src/images/logo.png' alt='logo图片未加载' />
+                        <IconFont type='iconNews'/>
                         <span>ReactNews</span>
                     </Col>
                     <Col span={16}>

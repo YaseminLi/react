@@ -5,8 +5,10 @@
   "main": "root.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "buildP": "webpack -p",
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "stats":"webpack --profile --json > compilation-stats.json"
   },
   "author": "",
   "license": "ISC",

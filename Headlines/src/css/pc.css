@@ -1,6 +1,6 @@
 /* 头部 */
 header{padding-top: 10px}
-header .logo img{height: 50px;width: 50px;vertical-align: baseline}
+header .logo svg{height: 50px;width: 50px;vertical-align: baseline}
 header .logo span{font-size: 40px;padding-left: 5px;color:black;}
 header .register {float:right}
 header .register a{display:inline}
@@ -21,7 +21,10 @@ header .register a{display:inline}
 .imageNewsList .ant-card-meta-title{font-size:14px}
 .imageNewsList .ant-card-meta-description{font-size:12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
 
-.pc_news_details .imageNewsList{padding-top: 50px;padding-left: 50px;widows: 400px;}
+.pc_news_details .imageNewsList{padding-top: 50px;padding-left: 50px;width: 450px;}
+.pcuccenter .ant-list-item{display: flex;justify-content:space-between;font-size:16px;}
+.pcuccenter .ant-list-item p{margin:0}
+
 /* 底部 */
 footer{text-align: center;margin-top:100px}
 

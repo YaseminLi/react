@@ -1,16 +1,34 @@
 // const path = require('path');
 module.exports = {
-    mode: 'development',
-    entry: './src/js/root.js',
+    mode: 'production',
+    entry: {app:'./src/js/root.js',
+            vendor:['react']},
     output: {
         path: __dirname,
-        filename: './src/bundle.js',
+        filename: '[name].js',
         // publicPath: '/'
     },
+    devtool:'source-map',
     devServer: {
         historyApiFallback: true,
         // publicPath: '/'
     },
+    // performance: {
+    //     hints: 'warning',
+    //     maxEntrypointSize: 400000,
+    //     maxAssetSize: 100000
+    //   },
+      optimization:{
+          splitChunks:{
+            cacheGroups: {
+                commons: {
+                  name: 'vendor',
+                  chunks: 'initial',
+                  minChunks: 2
+                }
+              }
+          }
+      },
     module: {
         rules: [
             {
