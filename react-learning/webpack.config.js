@@ -6,8 +6,9 @@ module.exports = {
     output: {
         // path: path.join(__dirname, "/dist/"),    // 所有输出文件的目标路径，绝对路径！
         // filename: "bundle.js"
-        path: __dirname,
-        filename: "./dist/bundle.js"
+        path: path.join(__dirname, "/dist/"),
+        filename: "bundle.js",
+        publicPath:'/outputdist/'
     },
     devServer: {
         historyApiFallback: true

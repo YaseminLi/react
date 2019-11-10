@@ -11,11 +11,12 @@ class Index extends React.Component{
   render(){
     return(
       <div>
-        <ComponentHeader/>
+        <p>helloword</p>
+        {/* <ComponentHeader/>
         <ComponentBody username={'xiaohong'} userage={8}/>
         <ComponentFooter/>
         <DatePicker />
-        <Button type="danger">Danger</Button>
+        <Button type="danger">Danger</Button> */}
       </div>
     )
   }

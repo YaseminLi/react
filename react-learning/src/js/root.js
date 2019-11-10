@@ -6,9 +6,10 @@ import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 class Root extends React.Component {
     render() {
         return (
-            <Router>
+            // <Router>
                 <div>
-                    <ul>
+                    <p>hello</p>
+                    {/* <ul>
                         <li>
                             <Link to="/">Index</Link>
                         </li>
@@ -19,9 +20,9 @@ class Root extends React.Component {
 
                     <hr />
                     <Route exact path="/" component={Index} />
-                    <Route path="/list" component={ComponentList} />
+                    <Route path="/list" component={ComponentList} /> */}
                 </div>
-            </Router>
+            // </Router>
         )
     }
 }
