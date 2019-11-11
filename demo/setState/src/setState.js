@@ -36,8 +36,8 @@ export default class SelectBox extends React.Component {
       }, 0);
    }
    batchUpdates (){
-      this.setState({ piliang: this.state.piliang + 1 })
-      this.setState({ piliang: this.state.piliang + 1 })
+      this.setState({ piliang: this.state.piliang + 2 })
+      this.setState({ piliang: this.state.piliang + 3 })
       this.setState({ piliang: this.state.piliang + 1 })
       console.log(this.state.piliang);//setState会合并，上一次渲染的值
       
