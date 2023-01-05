@@ -6,7 +6,10 @@ import "./App.css";
 // import CallbackRef from "./components/callbakRef";
 // import Imperativehandle from "./components/useImperativeHandle";
 // import SetState from "./components/setState/setState";
-import DataPassed from "./components/dataPassed";
+// import DataPassed from "./components/dataPassed";
+// import UseContextUseReducer from "./components/useContextUseReducer";
+import { Button } from "antd/dist/antd";
+import "antd/dist/antd.css";
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
       {/* <CallbackRef /> */}
       {/* <Imperativehandle /> */}
       {/* <SetState /> */}
-      <DataPassed />
+      {/* <DataPassed /> */}
+      {/* <UseContextUseReducer /> */}
+      <Button type="primary">button</Button>
     </div>
   );
 }
