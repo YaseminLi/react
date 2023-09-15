@@ -9,7 +9,9 @@ import "./App.css";
 // import DataPassed from "./components/dataPassed";
 // import UseContextUseReducer from "./components/useContextUseReducer";
 import { Button } from "antd/dist/antd";
+import I18n from "./components/i18n";
 import "antd/dist/antd.css";
+// import "./i18n/config";
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
       {/* <SetState /> */}
       {/* <DataPassed /> */}
       {/* <UseContextUseReducer /> */}
-      <Button type="primary">button</Button>
+      {/* <Button type="primary">button</Button> */}
+      <I18n />
     </div>
   );
 }
